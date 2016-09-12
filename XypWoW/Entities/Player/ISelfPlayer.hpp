@@ -33,8 +33,13 @@ namespace xyp { namespace WoW { namespace Entities {
             virtual ~ISelfPlayer() { }
 
             /// As object
-            virtual IObject::Ptr & AsObject() = 0;
+            virtual IObject::Ptr & AsObject() const = 0;
 
+        /// Spells
+        public:
+            /// Is on spell cooldown
+            /// @p_SpellID : Spell ID
+            virtual bool HasCooldown(uint32_t p_SpellID) = 0;
             /// Cast spell by ID
             /// @p_SpellID      : Spell ID to cast
             /// @p_TargetGuid   : Optional target GUID

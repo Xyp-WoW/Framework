@@ -25,7 +25,7 @@ namespace xyp { namespace WoW { namespace Entities {
             virtual ~IContainer() { }
 
             /// As object
-            virtual IObject::Ptr & AsObject() = 0;
+            virtual IObject::Ptr & AsObject() const = 0;
 
             /// Get container capacity
             virtual uint32_t GetNumSlots() const = 0;

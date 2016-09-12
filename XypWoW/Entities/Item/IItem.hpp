@@ -22,7 +22,7 @@ namespace xyp { namespace WoW { namespace Entities {
             virtual ~IItem() { }
 
             /// As object
-            virtual IObject::Ptr & AsObject() = 0;
+            virtual IObject::Ptr & AsObject() const = 0;
     };
 
 }   ///< namespace Entities

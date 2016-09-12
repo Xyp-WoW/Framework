@@ -51,23 +51,23 @@ namespace xyp { namespace WoW { namespace Entities {
 
         public:
             /// Get as IAreaTrigger
-            virtual SmartPtr<IAreaTrigger>  & AsAreaTrigger()  = 0;
+            virtual SmartPtr<IAreaTrigger>  & AsAreaTrigger()  const = 0;
             /// Get as IContainer
-            virtual SmartPtr<IContainer>    & AsContainer()    = 0;
+            virtual SmartPtr<IContainer>    & AsContainer()    const = 0;
             /// Get as IConversation
-            virtual SmartPtr<IConversation> & AsConversation() = 0;
+            virtual SmartPtr<IConversation> & AsConversation() const = 0;
             /// Get as ICorpse
-            virtual SmartPtr<ICorpse>       & AsCorpse()       = 0;
+            virtual SmartPtr<ICorpse>       & AsCorpse()       const = 0;
             /// Get as IGameObject
-            virtual SmartPtr<IGameObject>   & AsGameObject()   = 0;
+            virtual SmartPtr<IGameObject>   & AsGameObject()   const = 0;
             /// Get as IItem
-            virtual SmartPtr<IItem>         & AsItem()         = 0;
+            virtual SmartPtr<IItem>         & AsItem()         const = 0;
             /// Get as IPlayer
-            virtual SmartPtr<IPlayer>       & AsPlayer()       = 0;
+            virtual SmartPtr<IPlayer>       & AsPlayer()       const = 0;
             /// Get as ISelfPlayer
-            virtual SmartPtr<ISelfPlayer>   & AsSelfPlayer()   = 0;
+            virtual SmartPtr<ISelfPlayer>   & AsSelfPlayer()   const = 0;
             /// Get as IUnit
-            virtual SmartPtr<IUnit>         & AsUnit()         = 0;
+            virtual SmartPtr<IUnit>         & AsUnit()         const = 0;
 
             /// Get update field address
             /// @p_Field : Field index

@@ -22,7 +22,10 @@ namespace xyp { namespace WoW { namespace Entities {
             virtual ~IUnit() { }
 
             /// As object
-            virtual IObject::Ptr & AsObject() = 0;
+            virtual IObject::Ptr & AsObject() const = 0;
+
+            /// Get target
+            virtual IUnit::Ptr GetTarget() const = 0;
 
             /// Set display ID
             /// @p_DisplayID : Show display ID
