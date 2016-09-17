@@ -50,7 +50,7 @@ namespace xyp { namespace WoW {
 
             operator bool() const
             {
-                return m_Internal->Instance != nullptr;
+                return m_Internal && m_Internal->Instance != nullptr;
             }
 
             T* operator->()
@@ -69,6 +69,9 @@ namespace xyp { namespace WoW {
         private:
             void ClearRef()
             {
+                if (!m_Internal)
+                    return;
+
                 m_Internal->ReferenceCount--;
 
                 if (!m_Internal->ReferenceCount)
@@ -77,6 +80,7 @@ namespace xyp { namespace WoW {
                         delete m_Internal->Instance;
 
                     delete m_Internal;
+                    m_Internal = nullptr;
                 }
             }
 
