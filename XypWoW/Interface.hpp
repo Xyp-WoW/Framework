@@ -19,9 +19,9 @@ namespace xyp { namespace WoW {
             uintptr_t GetPointer() const { return m_ObjectPointer; }
 
             /// Get object as
-            template<class T> T& GetAs() const
+            template<class T> T GetAs() const
             {
-                return *reinterpret_cast<T*>(m_ObjectPointer);
+                return reinterpret_cast<T>(m_ObjectPointer);
             }
             /// Get variable
             /// @p_Offset : Variable offset
